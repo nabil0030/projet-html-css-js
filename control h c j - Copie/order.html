@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+background-image: url(picture/bakk3.jpg);  
+background-size: cover;     
+ margin: 0;
+
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .order-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ff4d0c;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #1e90ff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Items</h1>
+        <div class="order-form">
+            <div class="form-group">
+                <label for="brand">Product Brand:</label>
+                <input type="text" id="brand" placeholder="Enter product brand">
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" placeholder="Enter quantity">
+            </div>
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" placeholder="Enter your phone number">
+            </div>
+            <button onclick="placeOrder()">Place Order</button>
+        </div>
+    </div>
+
+    <script>
+        function placeOrder() {
+            const nameInput = document.getElementById('name');
+            const name = nameInput.value.trim(); // Trim any leading or trailing whitespace
+
+            if (name) {
+                alert(`Thank you for ordering ${name}!`);
+            } else {
+                alert('Please enter your information before placing the order.');
+            }
+        }
+    </script>
+</body>
+</html>

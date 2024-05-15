@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+
+background-image: url(picture/bbb1.webp);            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+                       border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .div1 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .div2-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .div2 {
+            border: 2px solid #333;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .div2:hover {
+            transform: scale(1.1);
+        }
+
+        .div11 {
+            border-radius: 10px;
+            background-image: url('picture/Capt1.png');
+            background-size: cover;
+            width: 100%;
+            max-width: 600px;
+            height: 500px; 
+            margin-bottom: 20px;
+            position: relative;
+        }
+        #div21{
+          
+          background-color: rgb(124, 85, 160); 
+                 }
+                  #div22{
+                    background-color: rgb(204, 208, 84);        }
+                  #div23{
+                    background-color: rgb(255, 191, 0);        }
+                  #div24{
+                    background-color: rgb(149, 201, 162);
+                  }
+              
+       
+
+      
+    </style>
+</head>
+
+<body>
+   
+    <div class="container">
+        <h1 style="margin-bottom: 20px; color: rgb(4, 163, 255);">Samsung s24 ultra</h1>
+        <div class="div1">
+            <div class="div11"></div>
+            <div class="div2-container">
+                <div class="div2" id="div21" onclick="changeImage('Description for div21', 'picture/n2.png')"></div>
+                <div class="div2" id="div22" onclick="changeImage('Description for div22', 'picture/n1.png')"></div>
+                <div class="div2" id="div23" onclick="changeImage('Description for div23', 'picture/n3.png')"></div>
+                <div class="div2" id="div24" onclick="changeImage('Description for div24', 'picture/n4.png')"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function changeImage(description, imageUrl) {
+            var div11 = document.querySelector('.div11');
+            div11.style.backgroundImage = 'url(' + imageUrl + ')';
+        }
+    </script>
+</body>
+</html>
